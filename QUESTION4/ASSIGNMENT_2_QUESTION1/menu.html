@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA Hotel Kigali - Luxury Redefined</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), 
+                        url('https://picsum.photos/id/1016/1920/1080') center/cover no-repeat;
+            height: 100vh;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -6px;
+            left: 0;
+            background-color: #14b8a6;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background: #14b8a6;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .card {
+            transition: all 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- NAVBAR -->
+    <nav class="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-teal-400 rounded-2xl flex items-center justify-center text-slate-900 text-4xl font-bold">L</div>
+                    <div>
+                        <span class="text-3xl font-bold tracking-tighter">LUMINA</span>
+                        <span class="text-teal-400 text-sm font-medium block -mt-1">HOTEL KIGALI</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-300 hover:text-white">HOME</a>
+                    <a href="about.html" class="nav-link text-slate-300 hover:text-white">ABOUT US</a>
+                    <a href="menu.html" class="nav-link text-slate-300 hover:text-white">MENU</a>
+                    <a href="gallery.html" class="nav-link text-slate-300 hover:text-white">GALLERY</a>
+                    <a href="order.html" class="nav-link text-slate-300 hover:text-white">ORDER NOW</a>
+                    <a href="contact.html" class="nav-link text-slate-300 hover:text-white">CONTACT</a>
+                </div>
+
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-slate-300">
+                    <i class="fa-solid fa-bars" id="hamburger"></i>
+                </button>
+            </div>
+        </div>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- Navbar (same as above) - Copy the nav section from about.html -->
+
+    <div class="max-w-7xl mx-auto px-6 py-20">
+        <h1 class="text-5xl font-bold text-center section-title mb-12">Our Menu</h1>
+        
+        <table class="w-full border-collapse bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden">
+            <thead>
+                <tr class="bg-slate-800 text-teal-400">
+                    <th class="px-8 py-6 text-left">Category</th>
+                    <th class="px-8 py-6 text-left">Item</th>
+                    <th class="px-8 py-6 text-left">Description</th>
+                    <th class="px-8 py-6 text-right">Price (RWF)</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-700">
+                <tr class="table-row"><td class="px-8 py-6 font-medium">FISH</td><td class="px-8 py-6">Grilled Tilapia</td><td class="px-8 py-6">Fresh Lake Kivu tilapia with herbs and spices</td><td class="px-8 py-6 text-right font-semibold">22,000</td></tr>
+                <tr class="table-row"><td class="px-8 py-6 font-medium">MAIN DISH</td><td class="px-8 py-6">Brochettes</td><td class="px-8 py-6">Grilled beef skewers with onions and peppers</td><td class="px-8 py-6 text-right font-semibold">16,000</td></tr>
+                <tr class="table-row"><td class="px-8 py-6 font-medium">MAIN DISH</td><td class="px-8 py-6">Chicken Stew</td><td class="px-8 py-6">Tender chicken in rich tomato sauce</td><td class="px-8 py-6 text-right font-semibold">15,000</td></tr>
+                <tr class="table-row"><td class="px-8 py-6 font-medium">STAPLE</td><td class="px-8 py-6">Ugali with Vegetables</td><td class="px-8 py-6">Traditional maize meal with fresh vegetables</td><td class="px-8 py-6 text-right font-semibold">9,000</td></tr>
+                <tr class="table-row"><td class="px-8 py-6 font-medium">RICE</td><td class="px-8 py-6">Pilau Rice</td><td class="px-8 py-6">Fragrant spiced rice with meat</td><td class="px-8 py-6 text-right font-semibold">14,000</td></tr>
+                <tr class="table-row"><td class="px-8 py-6 font-medium">BREAD</td><td class="px-8 py-6">Chapati</td><td class="px-8 py-6">Soft layered flatbread</td><td class="px-8 py-6 text-right font-semibold">3,500</td></tr>
+                <tr class="table-row"><td class="px-8 py-6 font-medium">DRINKS</td><td class="px-8 py-6">Mützig Beer</td><td class="px-8 py-6">Premium Rwandan lager</td><td class="px-8 py-6 text-right font-semibold">6,500</td></tr>
+                <tr class="table-row"><td class="px-8 py-6 font-medium">DRINKS</td><td class="px-8 py-6">Premium Whiskey</td><td class="px-8 py-6">Smooth blended whiskey</td><td class="px-8 py-6 text-right font-semibold">15,000</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="bg-slate-900 py-12 text-center text-slate-400">
+        <p>&copy; 2026 Lumina Hotel Kigali. </p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('hamburger');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+    </script>
+</body>
+</html>

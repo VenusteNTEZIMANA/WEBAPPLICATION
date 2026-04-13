@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTEKO NYARWANDA Y'URURIMI N'UMUCO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .header-bg {
+            background: linear-gradient(to right, #8b0000, #c8102e);
+        }
+        
+        .nav-link {
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.15);
+        }
+        
+        .player-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .player-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .player-img {
+            height: 260px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Top Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            
+            <!-- Left Logo -->
+            <div>
+                <img src="images/logo-left.png" 
+                     alt="Left Logo" 
+                     class="h-20 w-20 object-contain">
+            </div>
+
+            <!-- Center Title -->
+            <div class="text-center flex-1 px-4">
+                <h1 class="text-2xl md:text-3xl font-bold text-red-800 leading-tight">
+                    INTEKO NYARWANDA Y'URURIMI N'UMUCO
+                </h1>
+                <div class="text-sm text-green-700 mt-2 font-medium">
+                    Nti bavuga: Yigeze kurwaraho umutwe yenda kurira, | 
+                    Bavuga: Yigeze kurwaraho umutwe yenda kurira
+                </div>
+            </div>
+
+            <!-- Right Logo -->
+            <div>
+                <img src="images/logo-right.png" 
+                     alt="Right Logo" 
+                     class="h-20 w-20 object-contain">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="header-bg text-white py-3">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-medium">
+                <a href="#" class="nav-link px-5 py-2 rounded hover:bg-white/10">Home</a>
+                <a href="#" class="nav-link px-5 py-2 rounded hover:bg-white/10">Entertainment</a>
+                <a href="#" class="nav-link px-5 py-2 rounded hover:bg-white/10">Politique</a>
+                <a href="#" class="nav-link px-5 py-2 rounded hover:bg-white/10">Sports</a>
+                <a href="#" class="nav-link px-5 py-2 rounded hover:bg-white/10">Business</a>
+                <a href="#" class="nav-link px-5 py-2 rounded hover:bg-white/10">About Us</a>
+                <a href="#" class="nav-link px-5 py-2 rounded hover:bg-white/10">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Player of the Week Section -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Card 1 -->
+            <div class="player-card bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="images/player1.jpg" 
+                     alt="Player of the Week" 
+                     class="player-img w-full">
+                <div class="bg-red-800 text-white p-4">
+                    <h2 class="font-semibold text-lg">Player of the Week on 23</h2>
+                </div>
+                <div class="p-5 text-sm text-gray-700 leading-relaxed">
+                    Note that it's important to have both opening and closing curly braces ({ and }) 
+                    around each element's style. You also need to make sure your element's style is 
+                    between the opening and closing style tags.
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="player-card bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="images/player2.jpg" 
+                     alt="Player of the Week" 
+                     class="player-img w-full">
+                <div class="bg-red-800 text-white p-4">
+                    <h2 class="font-semibold text-lg">Player of the Week on 23</h2>
+                </div>
+                <div class="p-5 text-sm text-gray-700 leading-relaxed">
+                    Note that it's important to have both opening and closing curly braces ({ and }) 
+                    around each element's style. You also need to make sure your element's style is 
+                    between the opening and closing style tags.
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="player-card bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="images/player3.jpg" 
+                     alt="Player of the Week" 
+                     class="player-img w-full">
+                <div class="bg-red-800 text-white p-4">
+                    <h2 class="font-semibold text-lg">Player of the Week on 23</h2>
+                </div>
+                <div class="p-5 text-sm text-gray-700 leading-relaxed">
+                    Note that it's important to have both opening and closing curly braces ({ and }) 
+                    around each element's style. You also need to make sure your element's style is 
+                    between the opening and closing style tags.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

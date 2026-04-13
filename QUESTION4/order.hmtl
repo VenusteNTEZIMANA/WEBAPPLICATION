@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - LUMINA Hotel Kigali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- Navbar (copy from previous) -->
+
+    <div class="max-w-2xl mx-auto px-6 py-20">
+        <h1 class="text-5xl font-bold text-center section-title mb-12">Order Food Online</h1>
+
+        <div id="success" class="hidden bg-green-500/20 border border-green-500 text-green-400 p-6 rounded-3xl text-center mb-8">
+            ✅ Order placed successfully! Our team will deliver shortly.
+        </div>
+
+        <form id="orderForm" class="bg-slate-900 p-10 rounded-3xl space-y-8">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm mb-2">Full Name</label>
+                    <input type="text" id="fullName" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Email</label>
+                    <input type="email" id="email" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm mb-2">Phone</label>
+                    <input type="tel" id="phone" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Select Menu Item</label>
+                    <select id="menuItem" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4">
+                        <option value="">Choose item...</option>
+                        <option value="Grilled Tilapia">Grilled Tilapia</option>
+                        <option value="Brochettes">Brochettes</option>
+                        <option value="Chicken Stew">Chicken Stew</option>
+                        <option value="Pilau Rice">Pilau Rice</option>
+                        <option value="Mützig Beer">Mützig Beer</option>
+                        <option value="Matoke Stew">Matoke Stew</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm mb-2">Delivery Address</label>
+                <input type="text" id="address" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4">
+            </div>
+
+            <button type="submit" 
+                    class="w-full py-6 bg-teal-400 hover:bg-teal-500 text-slate-900 font-bold text-xl rounded-3xl">
+                PLACE ORDER NOW
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            document.getElementById('success').classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('success').classList.add('hidden');
+            }, 5000);
+        });
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('hamburger');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+    </script>
+</body>
+</html>

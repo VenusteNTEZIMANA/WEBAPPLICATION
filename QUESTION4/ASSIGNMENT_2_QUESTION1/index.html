@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA Hotel Kigali - Luxury Redefined</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), 
+                        url('https://picsum.photos/id/1016/1920/1080') center/cover no-repeat;
+            height: 100vh;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -6px;
+            left: 0;
+            background-color: #14b8a6;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background: #14b8a6;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .card {
+            transition: all 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- NAVBAR -->
+    <nav class="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-teal-400 rounded-2xl flex items-center justify-center text-slate-900 text-4xl font-bold">L</div>
+                    <div>
+                        <span class="text-3xl font-bold tracking-tighter">LUMINA</span>
+                        <span class="text-teal-400 text-sm font-medium block -mt-1">HOTEL KIGALI</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-300 hover:text-white">HOME</a>
+                    <a href="about.html" class="nav-link text-slate-300 hover:text-white">ABOUT US</a>
+                    <a href="menu.html" class="nav-link text-slate-300 hover:text-white">MENU</a>
+                    <a href="gallery.html" class="nav-link text-slate-300 hover:text-white">GALLERY</a>
+                    <a href="order.html" class="nav-link text-slate-300 hover:text-white">ORDER NOW</a>
+                    <a href="contact.html" class="nav-link text-slate-300 hover:text-white">CONTACT</a>
+                </div>
+
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-slate-300">
+                    <i class="fa-solid fa-bars" id="hamburger"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-t border-slate-700 px-6 py-6">
+            <a href="index.html" class="block py-3 border-b border-slate-700">HOME</a>
+            <a href="about.html" class="block py-3 border-b border-slate-700">ABOUT US</a>
+            <a href="menu.html" class="block py-3 border-b border-slate-700">MENU</a>
+            <a href="gallery.html" class="block py-3 border-b border-slate-700">GALLERY</a>
+            <a href="order.html" class="block py-3 border-b border-slate-700">ORDER NOW</a>
+            <a href="contact.html" class="block py-3 border-b border-slate-700">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">
+                LUMINA<br>
+                <span class="text-teal-400">KIGALI</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mb-10">
+                Experience timeless elegance and modern luxury in the heart of Kigali.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="order.html" class="px-10 py-5 bg-teal-400 hover:bg-teal-500 text-slate-900 font-semibold text-lg rounded-3xl">
+                    ORDER ROOM SERVICE
+                </a>
+                <a href="gallery.html" class="px-10 py-5 border-2 border-white hover:bg-white hover:text-slate-900 font-semibold text-lg rounded-3xl">
+                    VIEW GALLERY
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- WELCOME SECTION -->
+    <section class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold mb-6 section-title">Welcome to Lumina</h2>
+                    <p class="text-slate-400 text-lg leading-relaxed">
+                        Nestled in the hills of Kigali, Lumina Hotel offers unparalleled luxury, 
+                        world-class dining, and warm Rwandan hospitality. Every stay is an unforgettable experience.
+                    </p>
+                    <a href="about.html" class="mt-8 inline-block px-8 py-4 border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-3xl">
+                        Discover Our Story
+                    </a>
+                </div>
+                <div class="rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/1015/800/500" alt="Lumina Hotel" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php 
+    // Footer will be added in footer.html or copy below
+    ?>
+    <footer class="bg-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400">
+            <p>&copy; 2026 Lumina Hotel Kigali.</p>
+            
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('hamburger');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+    </script>
+</body>
+</html>

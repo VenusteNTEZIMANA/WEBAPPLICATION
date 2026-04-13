@@ -1,0 +1,73 @@
+<html>
+    <title>project2</title>
+    <head>
+<style>
+    .stud{
+        text-align: left;
+        padding: 10px;
+
+    }
+    label{
+        padding: 30px;
+        text-transform: uppercase;
+    }
+    input{
+        padding-left: 50px;
+        margin-left: 30px;
+    }
+     h1{
+        text-align: center;
+    }
+    .buttons{
+        text-align: center;
+    }
+</style>
+    </head>
+    <body>
+         <p><h1>student registration form</h1></p>
+        <form class="stud" method="get">
+            <ul>
+            <label>first name:</label><input type="text" required/><br><br>
+             <label>last name:</label><input type="text" required/><br><br>
+              <label>date of birth:</label><select type="drop-down">
+                <option>day:</option></select><select type="drop-down"><option>month:</option></select><select type="drop-down"><option>year:</option></select><br><br>
+              <label>email id:</label><input type="text" required/><br><br>
+               <label>mobile number:</label><input type="text" required/><br><br>
+                <label>gender:</label><input type="radio" name="sex" value="male"/>male <input type="radio" name="sex" value="female"/>female<br><br>
+                 <label>address:</label><textarea></textarea><br><br>
+                  <label>city:</label><input type="text" required/><br><br>
+                   <label>pin code:</label><input type="text" required/><br><br>
+                    <label>state:</label><input type="text" required/><br><br>
+                     <label>country:</label><input type="text" required/><br><br>
+                      <label>hobbies:</label><input type="radio" name="hobby"/>drawing<input type="radio" name="hobby"/>singing<input type="radio" name="hobby"/>dancing<input type="radio" name="hobby"/>sketching<input type="radio" name="hobby"/>others<br><br>
+<div id="qualificatios">
+    <label>qualification: </label><table>
+        <tr>
+            <th>s.no</th>  <th>examination</th>  <th>board</th>  <th>percentage</th>  <th>year of passing</th>
+        </tr>
+        <tr>
+            <td>1</td><td>class x</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td><td>class xii</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td><td>graduation</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td><td>masters</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>   </td><td>   </td><td>(10 char max)</td><td>(up to 2 decimal)</td><td></td>
+        </tr>
+
+
+    </table><br><br>
+</div>
+ <label>courses applied for:</label><input type="radio" name="course"/>BCA<input type="radio" name="course"/>B.com<input type="radio" name="course"/>B.sc<input type="radio" name="course"/>B.A<br><br>
+ <div class="buttons">
+    <button value="submit">submit</button><button value="reset">reset</button>
+ </div></ul>
+        </form>
+    </body>
+</html>

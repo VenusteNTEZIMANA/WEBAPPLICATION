@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-box">
+
+            <h2>STUDENT REGISTRATION FORM</h2>
+
+            <form action="register.php" method="post">
+
+                <!-- NAME -->
+                <div class="form-row">
+                    <label>FIRST NAME</label>
+                    <input type="text" name="fname">
+                </div>
+
+                <div class="form-row">
+                    <label>LAST NAME</label>
+                    <input type="text" name="lname">
+                </div>
+
+                <!-- DOB -->
+                <div class="form-row">
+                    <label>DATE OF BIRTH</label>
+
+                    <select name="day">
+                        <option value="">Day</option>
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write(`<option value="${i}">${i}</option>`)
+                            }
+                        </script>
+                    </select>
+
+                    <select name="month">
+                        <option value="">Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+
+                    <select name="year">
+                        <option value="">Year</option>
+                        <script>
+                            for (let y = 2026; y >= 1950; y--) {
+                                document.write(`<option value="${y}">${y}</option>`)
+                            }
+                        </script>
+                    </select>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="form-row">
+                    <label>EMAIL ID</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div class="form-row">
+                    <label>MOBILE NUMBER</label>
+                    <input type="text" name="phone">
+                </div>
+
+                <!-- GENDER -->
+                <div class="form-row">
+                    <label>GENDER</label>
+                    <span class="inline-text">Male <input type="radio" name="gender" value="male"></span>
+                    <span class="inline-text">Female <input type="radio" name="gender" value="female"></span>
+                </div>
+
+                <!-- ADDRESS -->
+                <div class="form-row">
+                    <label>ADDRESS</label>
+                    <textarea name="address"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label>CITY</label>
+                    <input type="text" name="city">
+                </div>
+
+                <div class="form-row">
+                    <label>PIN CODE</label>
+                    <input type="text" name="pincode">
+                </div>
+
+                <div class="form-row">
+                    <label>STATE</label>
+                    <input type="text" name="state">
+                </div>
+
+                <div class="form-row">
+                    <label>COUNTRY</label>
+                    <input list="countries" name="country" placeholder="India">
+
+                    <datalist id="countries">
+                        <option value="India">
+                        <option value="Rwanda">
+
+                        <option value="United States">
+                        <option value="Kenya">
+                    </datalist>
+                </div>
+
+                <!-- HOBBIES -->
+                <div class="form-row">
+                    <label>HOBBIES</label>
+                    <span class="inline-text">Drawing <input type="checkbox" name="hobbies[]" value="drawing"></span>
+                    <span class="inline-text">Singing <input type="checkbox" name="hobbies[]" value="singing"></span>
+                    <span class="inline-text">Dancing <input type="checkbox" name="hobbies[]" value="dancing"></span>
+                    <span class="inline-text">Sketching <input type="checkbox" name="hobbies[]"
+                            value="sketching"></span><br>
+
+                    <span class="inline-text Live">Others <input type="checkbox" name="hobbies[]" value="others"></span>
+                    <input type="text" name="others">
+                </div>
+
+                <!-- QUALIFICATION TABLE -->
+                <table>
+                    <tr>
+                        <th>QUALIFICATION</th>
+                        <th>Sl.No.</th>
+                        <th>Examination</th>
+                        <th>Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>Class X</td>
+                        <td><input type="text" name="bxi" maxlength="10" class="tableinput"></td>
+                        <td><input type="number" name="pxi" step="0.01" min="0" max="100" class="tableinput"></td>
+                        <td><input type="text" name="yxi" class="tableinput"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>2</td>
+                        <td>Class XII</td>
+                        <td><input type="text" name="bxii" maxlength="10" class="tableinput"></td>
+                        <td><input type="number" name="pxii" step="0.01" min="0" max="100" class="tableinput"></td>
+                        <td><input type="text" name="yxii" class="tableinput"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>3</td>
+                        <td>Graduation</td>
+                        <td><input type="text" name="bg" maxlength="10" class="tableinput"></td>
+                        <td><input type="number" name="pg" step="0.01" min="0" max="100" class="tableinput"></td>
+                        <td><input type="text" name="yg" class="tableinput"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>4</td>
+                        <td>Masters</td>
+                        <td><input type="text" name="bm" maxlength="10" class="tableinput"></td>
+                        <td><input type="number" name="pm" step="0.01" min="0" max="100" class="tableinput"></td>
+                        <td><input type="text" name="ym" class="tableinput"></td>
+                    </tr>
+                </table>
+
+                <p style="text-align:center; font-size:12px;">
+                    (10 char max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (upto 2 decimal)
+                </p>
+
+                <!-- COURSE -->
+                <div class="form-row">
+                    <label>COURSES APPLIED FOR</label>
+                    BCA <input type="radio" name="course" value="BCA">
+                    B.Com <input type="radio" name="course" value="BCom">
+                    B.Sc <input type="radio" name="course" value="BSc">
+                    B.A <input type="radio" name="course" value="BA">
+                </div>
+
+                <!-- BUTTONS -->
+                <div style="text-align:center;">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

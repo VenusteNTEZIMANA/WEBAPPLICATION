@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - LUMINA Hotel Kigali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .gallery-card {
+            transition: all 0.4s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-8px);
+        }
+        .gallery-card:hover img {
+            transform: scale(1.08);
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background: #14b8a6;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- Navbar -->
+    <nav class="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-teal-400 rounded-2xl flex items-center justify-center text-slate-900 text-4xl font-bold">L</div>
+                    <div>
+                        <span class="text-3xl font-bold tracking-tighter">LUMINA</span>
+                        <span class="text-teal-400 text-sm font-medium block -mt-1">HOTEL KIGALI</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="text-slate-300 hover:text-white">HOME</a>
+                    <a href="about.html" class="text-slate-300 hover:text-white">ABOUT US</a>
+                    <a href="menu.html" class="text-slate-300 hover:text-white">MENU</a>
+                    <a href="gallery.html" class="text-teal-400">GALLERY</a>
+                    <a href="order.html" class="text-slate-300 hover:text-white">ORDER NOW</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-white">CONTACT</a>
+                </div>
+
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-slate-300">
+                    <i class="fa-solid fa-bars" id="hamburger"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-t border-slate-700 px-6 py-6">
+            <a href="index.html" class="block py-3 border-b border-slate-700">HOME</a>
+            <a href="about.html" class="block py-3 border-b border-slate-700">ABOUT US</a>
+            <a href="menu.html" class="block py-3 border-b border-slate-700">MENU</a>
+            <a href="gallery.html" class="block py-3 border-b border-slate-700">GALLERY</a>
+            <a href="order.html" class="block py-3 border-b border-slate-700">ORDER NOW</a>
+            <a href="contact.html" class="block py-3 border-b border-slate-700">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Gallery Content -->
+    <div class="max-w-7xl mx-auto px-6 py-20">
+        <h1 class="text-5xl font-bold text-center section-title mb-12">Our Gallery</h1>
+        <p class="text-center text-slate-400 mb-16 text-lg">Click any image to order instantly</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            
+            <a href="order.html" class="gallery-card block rounded-3xl overflow-hidden border border-slate-700">
+                <img src="images/Grilled Tilapia.jpg" alt="Grilled Tilapia" class="w-full h-64 object-cover">
+                <div class="p-4 bg-slate-900 text-center font-medium">Grilled Tilapia</div>
+            </a>
+
+            <a href="order.html" class="gallery-card block rounded-3xl overflow-hidden border border-slate-700">
+                <img src="images/brochettes.jpg" alt="Brochettes" class="w-full h-64 object-cover">
+                <div class="p-4 bg-slate-900 text-center font-medium">Brochettes</div>
+            </a>
+
+            <a href="order.html" class="gallery-card block rounded-3xl overflow-hidden border border-slate-700">
+                <img src="images/Chicken Stew.jpg" alt="Chicken Stew" class="w-full h-64 object-cover">
+                <div class="p-4 bg-slate-900 text-center font-medium">Chicken Stew</div>
+            </a>
+
+            <a href="order.html" class="gallery-card block rounded-3xl overflow-hidden border border-slate-700">
+                <img src="images/Mutzigbeer.jpg" alt="Mutzigbeer" class="w-full h-64 object-cover">
+                <div class="p-4 bg-slate-900 text-center font-medium">Mützig Beer</div>
+            </a>
+
+            <a href="order.html" class="gallery-card block rounded-3xl overflow-hidden border border-slate-700">
+                <img src="images/pilau.jpg" alt="Pilau Rice" class="w-full h-64 object-cover">
+                <div class="p-4 bg-slate-900 text-center font-medium">Pilau Rice</div>
+            </a>
+
+            <a href="order.html" class="gallery-card block rounded-3xl overflow-hidden border border-slate-700">
+                <img src="images/matoke.jpg" alt="Matoke Stew" class="w-full h-64 object-cover">
+                <div class="p-4 bg-slate-900 text-center font-medium">Matoke Stew</div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-12 text-center text-slate-400">
+        <p>&copy; 2026 Lumina Hotel Kigali.</p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('hamburger');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+    </script>
+</body>
+</html>
